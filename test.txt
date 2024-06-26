@@ -1,0 +1,106 @@
+1.User se 5 input lena hai, inka maximum nikalna hai. Agar maximum > 90 hota hai to 
+ek function call karna hai, jisme maximum aur ek user input ko subtract karna hai 
+aur result return karna hai. Agar result positive hai to us value ka cube return 
+karna hai.  agar result -ve hai to fir uska sqaure nikalna hai aur agar result 0 ata
+ hai to fir apko console log karna hai : "aur nahi ho raha hai merese".
+
+ans.=>
+
+function sub(n1,n2){
+    return n1-n2
+}
+
+function main(){
+    let a= 10;
+    let b=100;
+    let c= 20;
+    let d= 30;
+    let e= 40;
+    let max= a;
+    if(b>max) max=b;
+    if(c>max) max=c;
+    if(d>max) max=d;
+    if(e>max) max=e;
+     if(max>90){
+        let result = sub(max,e)
+        if(result>0){
+            return result*result*result
+        }
+        else if(result<0){
+            return result*result
+        }
+        else{
+            console.log("mere se nhi hio rha hai")
+        }
+     }
+}
+
+let finalresult = main()
+console.log(finalresult)
+
+-------------------------------------------------------------
+2.
+User se 3 input lena hai, inka average nikalna hai. Agar average > 40 
+hai to ek function call karna hai, jisme 2 input lena hai aur unka 
+product return karna hai. Agar product negative hai to absolute value
+ return karna ha  aur uske baad uska reverse nikalna. agar product 
+ positive hai to fir check karna hai ki product prime number hai ya nahi hai.
+
+ ans.=>
+
+
+ 
+
+function product(){
+    let a=10;
+    let b=20;
+    return a*b
+}
+function prime(n){
+    let flag=0;
+    for(let i=2;i<n;i++){
+      
+        if(n%i==0){
+            flag=1;
+            return false
+        }
+        
+        return true
+    }
+}
+
+function reverse(num){
+    let rem,sum=0;
+   
+    while(num>0){
+        rem=num%10;
+        sum=parseInt(sum*10+rem);
+        num=parseInt(num/10);
+    }
+   return sum
+}
+function main(){
+    let a= 50;
+    let b= 60;
+    let c=40;
+    let avg= (a+b+c)/3;
+    if(avg>40){
+        let result = product()
+        if(result>0){
+            let result2 = prime(result)
+            if(result2==true){
+                console.log("number is prime")
+            }
+            else{
+                console.log("numbr is not prime")
+            }
+        }
+        else if(result<0){
+            let result3= reverse(result)
+            console.log(`reverse is ${result3}`)
+        }
+    }
+}
+
+let finalresult= main()
+---------------------------------------------------------

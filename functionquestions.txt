@@ -1,0 +1,663 @@
+Question 1
+User se 4 input lena hai, inka sum nikalna hai. Agar sum > 100 hota hai to ek function call karna hai, jisme 3 input lena hai aur 
+unka average return karna hai. Agar returned average > 50 hai to ek aur function call karke factorial nikalna hai aur check karna 
+hai wo prime number hai ya nahi.
+ans.=>
+
+function calculateavg(num1,num2,num3){
+    return (num1+num2+num3)/3
+}
+
+function facti(n){
+    let fact=1;
+        for(let i=1;i<=n;i++){
+            fact=fact*i
+        }
+       return fact
+}
+
+function isPrime(n){
+    let flag=0;
+    for(let i=2;i<n;i++){
+      
+        if(n%i==0){
+            flag=1;
+        }
+        return false
+        
+    }
+   return true
+}
+function main(){
+    let a=60;
+    let b= 60;
+    let c= 50;
+    let d= 50;
+    let sum = a+b+c+d;
+    if(sum>100){
+        let avg =calculateavg(a,b,c);
+        if(avg>50){
+            let fact = facti(avg)
+            let prime = isPrime(fact)
+            return `${fact}:is prime number`
+        }
+        else{
+            return `${fact}:is not prime`
+        }
+    }
+}
+let finalresult = main()
+console.log(finalresult)
+---------------------------------------------
+User se 2 input lena hai, inka product nikalna hai. Agar product < 50 hota hai to ek function call karna hai, jisme product aur 
+ek user input ko add karna hai aur result ko return karna hai. Agar returned value odd hai to ek aur function call karke us value
+ ko square karna hai aur result return karna hai.
+ans.=>
+
+function addnum(a,b){
+    return a+b
+}
+
+function oddsqure(n){
+    return n*n
+}
+function main(){
+    let a= 8;
+    let b= 5;
+    let product = a*b;
+    if(product<50){
+        let c=15;
+        let result = addnum(product,c)
+        if(result%2!==0){
+            result = oddsqure(result)
+        }
+        console.log(`final result is ${result}`)
+    }
+    else{
+        console.log("product is greater then 50")
+    }
+}
+let finalresult = main() 
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Question 2
+User se 6 input lena hai, inka maximum nikalna hai. Agar maximum > 75 hota hai to ek function call karna hai, jisme maximum 
+aur 2 user inputs ko subtract karna hai aur result return karna hai. Agar result negative hai to absolute value nikal kar 
+factorial return karna hai.
+ans.=>
+
+function maxsub(n1,n2,n3){
+    return n1-n2-n3
+}
+
+function facti(n){
+    let fact=1;
+    for(let i=1;i<=n;i++){
+        fact=fact*i
+    }
+   return fact
+}
+function main(){
+    let a= 10;
+    let b= 20;
+    let c= 30;
+    let d= 40;
+    let e=50;
+    let f=80;
+    let max = a;
+    if(b>max) max=b;
+    if(c>max) max=c;
+    if(d>max) max=d;
+    if(e>max) max=e;
+    if(f>max) max=f;
+    console.log(max);
+
+    if(max>75){
+        let result =maxsub(max,a,b)
+        if(result<0){
+            let absulatevalue= Math.abs(result)
+            let fact = facti(absulatevalue) 
+            return fact
+        }
+    }
+}
+let finalresult =main()
+console.log(finalresult)
+----------------------------------------------------
+User se 3 input lena hai, inka sum nikalna hai. Agar sum 0 hota hai to ek function call karna hai aur check karna hai ki wo 
+perfect square hai ya nahi. Agar perfect square hai to uska square root nikalna hai aur result return karna hai.
+
+Question 3
+User se 5 input lena hai, inka average nikalna hai. Agar average > 60 hai to ek function call karna hai, jisme 3 input lena 
+hai aur unka product return karna hai. Agar product even hai to uska half return karna hai, agar odd hai to uska double return karna hai.
+ans.=>
+
+function product(){
+    let x=5;
+    let y=10;
+    let z=20;
+    return x*y*z
+}
+
+function main(){
+    let a= 90;
+    let b= 70;
+    let c= 50;
+    let d= 60;
+    let e= 80;
+    let avg = (a+b+c+d+e)/5;
+    if(avg>60){
+        let pro = product()
+        if(pro%2==0){
+            return pro/2
+        }
+        else{
+            return pro*2
+        }
+    }
+    else{
+        console.log("less than 60")
+    }
+}
+let finalresult = main()
+console.log(finalresult)
+------------------------------------------------
+User se 4 input lena hai, inka minimum nikalna hai. Agar minimum < 10 hai to ek function call karna hai aur minimum ko 5 se 
+multiply karna hai aur result return karna hai. Agar result > 50 hai to factorial nikalna hai aur result return karna hai.
+ans.=>
+
+
+function multipication(n){
+    return n*5
+}
+function main(){
+    let a= 9;
+    let b= 70;
+    let c= 50;
+    let d= 60;
+    let min = a;
+    if(b<min) min=b;
+    if(c<min) min=c;
+    if(d<min) min=d;
+    console.log(min)
+    if(min<10){
+        let result = multipication(min)
+        console.log(result)
+    }
+}
+let finalresult = main()
+console.log(finalresult)
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+Question 4
+User se 3 input lena hai, unka sum nikalna hai. Agar sum > 80 hai to ek function call karna hai, jisme 2 input lena hai aur
+ unka division result return karna hai. Agar result integer hai to us integer ka reverse return karna hai.
+ans.=>
+
+
+function division(){
+    let a=2520;
+    let b= 10;
+    return parseInt(a/b)
+}
+
+function reverse(num){
+   let rem,sum=0;
+   
+   while(num>0){
+       rem=num%10;
+       sum=parseInt(sum*10+rem);
+       num=parseInt(num/10);
+   }
+  return sum
+}
+function main(){
+    let a= 30;
+    let b= 40;
+    let c= 50;
+    
+   let sum = a+b+c;
+   if(sum>80){
+    let result = division()
+   let rev = reverse(result)
+   console.log(`reverse number is ${rev}`)
+   }
+}
+let finalresult = main()
+console.log(finalresult)
+---------------------------------------------------------
+User se 2 input lena hai, inka difference nikalna hai. Agar difference < 0 hai to absolute value return karna hai. 
+Agar difference even hai to ek function call karna hai aur us value ka cube return karna hai.
+ans.=>
+
+function cube(n){
+    return n*n*n
+}
+
+function main(){
+    let a=10;
+    let b= 16;
+    let sub= a-b;
+    if(sub<0){
+        let abs= Math.abs(sub)
+        return abs
+    }
+    if(sub%2==0){
+       return cube(sub)
+       
+    }
+ 
+}
+
+let finalresult = main()
+console.log(finalresult)
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+Question 5
+User se 4 input lena hai, inka product nikalna hai. Agar product > 1000 hai to ek function call karna hai, jisme product 
+aur ek user input ko divide karna hai aur result return karna hai. Agar result fraction hai to uska ceiling value return karna hai.
+aans.=>
+
+
+function main(){
+    let a= 10;
+    let b= 20;
+    let c= 30;
+    let d= 4;
+
+    var product = a*b*c*d;
+    if(product>1000){
+        let result = product/a;
+        let ceiling_value=  Math.ceil(result);
+        return ceiling_value
+    }
+    else{
+        return product
+    }
+}
+let finalresult = main()
+console.log(finalresult)
+
+--------------------------------
+User se 3 input lena hai, inka average nikalna hai. Agar average < 25 hai to ek function call karna hai aur check karna hai 
+ki wo prime number hai ya nahi. Agar prime hai to uska factorial return karna hai.
+ans.=>
+
+function isPrime(n){
+        let flag=0;
+        for(let i=2;i<n;i++){
+          
+            if(n%i==0){
+                flag=1;
+                 return false
+            }
+           
+            return true
+        }
+       
+    
+    }
+    function factorial(){
+        let fact=1;
+        for(let i=1;i<=n;i++){
+            fact=fact*i
+        }
+       return fact
+    }
+
+    
+function main(){
+    let a=15;
+    let b=10;
+    let c=20;
+    let avg =( a+b+c)/3;
+    if(avg<25){
+        if(isPrime(avg)){
+            let fact= factorial(avg);
+            return fact;
+        }
+        else{
+            console.log("not a prime number")
+        }
+       
+    } else{
+        console.log("avg is not less than 25")
+    }
+}
+let finalresult = main()
+console.log(finalresult)
+
++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+Question 6
+User se 5 input lena hai, inka maximum nikalna hai. Agar maximum > 90 hota hai to ek function call karna hai, jisme 
+maximum aur ek user input ko subtract karna hai aur result return karna hai. Agar result positive hai to us value ka cube return karna hai.
+ans.=>
+
+function sub(n1,n2){
+    return n1-n2
+}
+
+function main(){
+    let a=50;
+    let b= 60;
+    let c= 70;
+    let d=80;
+    let e= 100;
+    let max =a;
+    if(b>max) max=b;
+    if(c>max) max=c;
+    if(d>max) max=d;
+    if(e>max) max=e;
+   if(max>90){
+    let result = sub(max,a)
+    if(result>0){
+        return result*result*result
+    }
+   }
+    
+}
+let finalresult = main()
+console.log(finalresult)
+--------------------------------------------------------
+User se 4 input lena hai, inka sum nikalna hai. Agar sum < 50 hai to ek function call karna hai aur sum ka reverse nikalna hai
+ aur result return karna hai. Agar reverse value even hai to uska half return karna hai.
+ans.=>
+function reverse(num){
+    let rem,sum=0;
+   
+    while(num>0){
+        rem=num%10;
+        sum=parseInt(sum*10+rem);
+        num=parseInt(num/10);
+    }
+   return sum
+}
+
+function main(){
+    let a=10;
+    let b= 5;
+    let c= 15;
+    let d=15;
+    let sum = a+b+c+d;
+    if(sum<50){
+        let result = reverse(sum)
+        if(result%2==0){
+            return Math.floor(result/2)
+        }
+    }
+    
+   }
+    
+
+let finalresult = main()
+console.log(finalresult)
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Question 7
+User se 3 input lena hai, inka average nikalna hai. Agar average > 40 hai to ek function call karna hai, jisme 2 input 
+lena hai aur unka product return karna hai. Agar product negative hai to absolute value return karna hai.
+ans.=>
+
+function product(){
+    let a=-10;
+    let b= 5;
+    return a*b;
+}
+
+function main(){
+    let a=50;
+    let b= 60;
+    let c=40;
+    let avg= (a+b+c)/3;
+    if(avg>40){
+        let result = product()
+        if(result<0){
+            return Math.abs(result)
+        }
+    }
+}
+let finalresult = main()
+console.log(finalresult)
+-----------------------------------------------------------
+User se 2 input lena hai, inka maximum nikalna hai. Agar maximum > 30 hai to ek function call karna hai aur check karna hai 
+wo prime hai ya nahi. Agar prime hai to factorial return karna hai.
+ans.=>
+   
+function isPrime(n){
+    let flag=0;
+    for(let i=2;i<n;i++){
+      
+        if(n%i==0){
+            flag=1;
+            return false
+        }
+        
+        return true
+    }
+   
+}
+function factorial(n){
+    let fact=1;
+    for(let i=1;i<=n;i++){
+        fact=fact*i
+        
+    }
+    return fact
+}
+
+function main(){
+    let a= 31;
+    let b= 30;
+    let max = a;
+    if(b>max) max=b;
+    if(max>30){
+        let result = isPrime(max)
+       if(result===true){
+       console.log("number is prime")
+        let lax =factorial(max)
+        console.log(lax)
+       }
+       else(
+        console.log("not a prime")
+       )
+    }  
+}
+let finalresult = main()
+console.log(finalresult)
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Question 8
+
+User se 4 input lena hai, inka sum nikalna hai. Agar sum > 150 hai to ek function call karna hai, jisme 3 input lena hai 
+aur unka sum return karna hai. Agar returned sum even hai to factorial nikalna hai aur result return karna hai.
+ans.=>
+
+function fact(n){
+    let fact=1;
+    for(let i=1;i<=n;i++){
+        fact=fact*i
+        
+    }
+    return fact
+}
+
+function sumadd(){
+    let a= 2;
+    let b= 2;
+    return a+b
+}
+
+function main(){
+    let a= 40;
+    let b= 50;
+    let c= 60;
+    let d= 70;
+    let sum = a+b+c+d;
+    if(sum>150){
+       let result = sumadd()
+       if(result%2==0){
+        let result2 = fact(result)
+        console.log(result2)
+       }
+    }
+}
+let finalresult = main()
+console.log(finalresult)
+
+------------------------------------------------
+User se 2 input lena hai, inka product nikalna hai. Agar product < 20 hai to ek function call karna hai aur
+ product ko 5 se add karna hai aur result return karna hai.
+ans.=>
+
+function proadd(n){
+    return n+5
+}
+
+function main(){
+    let a=2;
+    let b= 5;
+    let product = a*b;
+    if(product<20){
+        let result = proadd(product)
+        console.log(result)
+    }
+}
+let finalresult = main()
+console.log(finalresult)
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Question 9
+User se 6 input lena hai, inka average nikalna hai. Agar average > 70 hai to ek function call karna hai, jisme 
+4 input lena hai aur unka maximum return karna hai. Agar maximum > 50 hai to uska cube return karna hai.
+
+ans.=>
+
+function maxi(){
+    let a=20;
+    let b= 30;
+    let c= 40;
+    let d= 60;
+    let max =a;
+    if(b>max) max=b;
+    if(c>max) max=c;
+    if(d>max) max=d;
+    return max
+
+}
+
+function main(){
+    let a= 50;
+    let b= 110;
+    let c= 90;
+    let d= 70;
+    let e= 100;
+    let f= 60;
+    let avg = (a+b+c+d+e+f)/6;
+    if(avg>70){
+        let result = maxi()
+        if(result>50){
+            return result*result*result
+        }
+    }
+
+}
+let finalresult = main()
+console.log(finalresult)
+
+-------------------------------------------------------------
+User se 3 input lena hai, inka sum nikalna hai. Agar sum < 30 hai to ek function call karna hai aur sum ko 10 se 
+multiply karna hai aur result return karna hai.
+ans.=>
+
+function multi(n){
+    return n*10
+}
+
+function main(){
+    let a=5;
+    let b= 10;
+    let c= 10;
+    let sum = a+b+c;
+    if(sum<30){
+        let result = multi(sum)
+        console.log(result)
+    }
+}
+let finalresult = main()
+console.log(finalresult)
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Question 10
+User se 5 input lena hai, inka product nikalna hai. Agar product > 500 hai to ek function call karna hai, jisme 
+product aur ek user input ko divide karna hai aur result return karna hai. Agar result integer hai to factorial nikalna hai aur result return karna hai.
+ans.=>
+
+
+function divide(n1,n2){
+    return Math.floor(n1/n2)
+}
+
+function factorial(n){
+    let fact=1;
+    for(let i=1;i<=n;i++){
+        fact=fact*i
+        
+    }
+    return fact
+}
+function main(){
+    let a= 10;
+    let b=20;
+    let c= 30;
+    let d= 40;
+    let e= 50;
+    let product = a*b*c*d*e;
+    if(product>500){
+        let result = divide(product,e)
+        let result2 = factorial(result)
+        console.log(result2)
+    }
+}
+let finalresult= main()
+console.log(finalresult)
+------------------------------------------------------------
+
+User se 4 input lena hai, inka maximum nikalna hai. Agar maximum > 20 hai to ek function call karna hai 
+aur check karna hai wo prime hai ya nahi. Agar prime hai to uska double return karna hai.
+
+ans.=>
+function prime(n){
+    let flag=0;
+    for(let i=2;i<n;i++){
+      
+        if(n%i==0){
+            flag=1;
+            return false
+        }
+        
+        return true
+    }
+}
+
+function main(){
+    let a= 10;
+    let b= 20;
+    let c= 30;
+    let d= 41;
+    let max= a;
+    if(b>max) max=b;
+    if(c>max) max=c;
+    if(d>max) max=d;
+    if(max>20){
+        let result = prime(max)
+        if(result===true){
+            return max*2
+        }
+    }
+
+}
+let finalresult = main()
+console.log(finalresult)
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
