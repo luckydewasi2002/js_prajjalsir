@@ -1,0 +1,97 @@
+// 1. You have several objects and need to pass them to a function. Inside the function, use the rest operator to handle the objects and print each one. Write the function and explain the process.
+
+// const printobject = (...objects) => {
+//   objects.forEach((object) => {
+//     console.log(object);
+//   });
+// };
+
+// const obj1 = { name: "Alice" };
+// const obj2 = { name: "kartika" };
+// const obj3 = { name: "Piru" };
+
+// printobject(obj1, obj2, obj3);
+
+//2. Write a function that can take any number of arguments and return their sum. Explain how the rest operator allows you to handle an indefinite number of arguments and how you can iterate using ForEach over them to calculate the sum.
+
+// const summation = (...nums) => {
+//   let sum = 0;
+//   nums.forEach((num) => {
+//     sum += num;
+//   });
+//   return sum;
+// };
+
+// console.log(summation(1, 2, 3, 4, 5, 6));
+
+//3. Write a function that can take any number of arguments and return their sum. Explain how the rest operator allows you to handle an indefinite number of arguments and how you can iterate(using reduce) over them to calculate the sum.
+
+// reduce array ke continous data par kaam karti hai
+// rest operator apne app mai array
+
+// const summation = (...nums) => {
+//   //   let sum = 0;
+//   return nums.reduce((sum, num) => sum + num, 0);
+// };
+
+// console.log(summation(1, 2, 3, 4, 5, 6));
+
+//3. Write a function that can take any number of arguments and return their factorial. Explain how the rest operator allows you to handle an indefinite number of arguments and how you can iterate(using reduce) over them to calculate the sum.
+
+// reduce array ke continous data par kaam karti hai
+// rest operator apne app mai array
+
+// const factorial = (...nums) => {
+//   return nums.reduce((fact, num) => fact * num, 1);
+// };
+
+// console.log(factorial(1, 2, 3, 4, 5));
+
+//4. Write a function that can take any number of arguments and return their max. Explain how the rest operator allows you to handle an indefinite number of arguments and how you can iterate(using reduce) over them to calculate the sum.
+
+// reduce array ke continous data par kaam karti hai
+// rest operator apne app mai array
+
+// const maximum = (...nums) => {
+//   return nums.reduce((maxi, num) => (maxi > num ? maxi : num), -1000);
+// };
+
+// console.log(maximum(-5, -4, -3, -2));
+
+// for loop: index based hai and foreach wo value based loop hai
+// const arr= [12,14,15,16]
+// arr[0]=12
+// arr[1]=14
+// arr[2]=15
+// arr[3]=16
+
+// for(let i=0;i<arr.length();i++)
+// {
+//     console.log(arr[i]);
+// }
+
+// arr.foreach((item)=>{
+// console.log(item)
+// })
+
+// map,reduce,filter,find,slice,splice ==>foreach value loop hai
+// inmai se koi bhi indexed based loop nahi hai
+
+// line se values mil rahi hai to kya mai values ko skip kar sakta hoon
+
+//5. Write a function that can take any number of arguments and return their even sum only. Explain how the rest operator allows you to handle an indefinite number of arguments and how you can iterate(using reduce) over them to calculate the sum.
+
+// reduce array ke continous data par kaam karti hai
+// rest operator apne app mai array
+
+const summation = (...nums) => {
+  return nums.reduce((sume, num) => {
+    if (num % 2 == 0) {
+      return sume + num;
+    } else {
+      return sume;
+    }
+  }, 0);
+};
+
+console.log(summation(1, 2, 3, 4, 5, 6));

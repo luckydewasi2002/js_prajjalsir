@@ -1,0 +1,62 @@
+1. user defined callback function banao calculator jo a,b,c 
+and konsa function run karwana hai wo chaleyega, add, subtract,multiply divide
+ans.=>
+
+function calculator(a,b,operation){
+    return operation(a,b)
+}
+
+function sum(a,b){
+    return a+b
+}
+function sub(a,b){
+    return a-b
+}
+
+function mul(a,b){
+    return a*b
+}
+function divide(a,b){
+    return a/b
+}
+
+console.log(calculator(5,6,sum))
+console.log(calculator(8,9,sub))
+console.log(calculator(5,2,mul))
+console.log(calculator(9,4,divide))
+---------------------------------------------------------
+2. user defined function masterfunction banna hai jo 1 information
+ leti hai out of username,age,rollno, aur ek function as an argument 
+ leti hai, print name mai agar username and printname function bheja
+  gaya ho, age, printage, rollno, printrollno
+
+  ans.=>
+
+  
+function masterFunction(info, func) {
+   return func(info);
+  }
+  
+ 
+  function printName(info) {
+    console.log(`Name: ${info.username}`);
+  }
+  
+  function printAge(info) {
+    console.log(`Age: ${info.age}`);
+  }
+  
+  function printRollNo(info) {
+    console.log(`Roll No: ${info.rollNo}`);
+  }
+  
+  const user={
+    username: 'John Doe',
+     age: 25, 
+     rollNo: 12345
+  }
+  
+  masterFunction(user, printName);
+  masterFunction(user, printAge);
+  masterFunction(user, printRollNo);
+  -------------------------------------------------
