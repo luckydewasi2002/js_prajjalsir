@@ -15,7 +15,7 @@
 // 3. pass more than one string argument from function and check whether
 // the name prajjalis appear how many times
 
-// const frequencycount = (...names) => {
+// const namecount = (...names) => {
 //     const count=1;
 //     return names.reduce((count, names) => {
 //       if (names == "prajjal") return count + 1;
@@ -23,4 +23,4 @@
 //     }, 0);
 //   };
   
-//   console.log(frequencycount("prajjal","lax","prajjal","ravi"));
+//   console.log(namecount("prajjal","lax","prajjal","ravi"));
