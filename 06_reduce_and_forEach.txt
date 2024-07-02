@@ -1,20 +1,88 @@
 1. using rest operator function concept pass n no of arguments and get the maxium of it (forEach)
-ans.=>
-function findmax(...nums){
-    let max=1;
-    nums.forEach((nums)=>{
-           if(nums>max){
-            max=nums;
-           }
-           
-    })
-    return max
-}
-console.log(findmax(1,2,3,4,5,6))
+function findMax(...nums) {
+     let max = nums[0];
+     
+     nums.forEach((num) => {
+       if (num > max) {
+         max = num;
+       }
+     });
+     
+     return max;
+   }
+   
 
----------------------------------------------------------------------------------
+   console.log(findMax(10, 20, 30, 40, 50, 60)); // Output: 60
+----------------------------------------------------------------
+
 2.using rest operator function concept pass n no of arguments and get the minimum of it (reduce)
+const minimum = (...nums) => {
+  return nums.reduce((maxi, num) => (maxi > num ? maxi : num), -1000);
+};
+
+console.log(maximum(-5, -4, -3, -2));
+
 3.using rest operator function concept pass n no of arguments and get the sum of even numbers of it (forEach)
+function sumOfEvens(...args) {
+     let sum = 0;
+   
+     args.forEach((num) => {
+       if (num % 2 === 0) {
+         sum += num;
+       }
+     });
+   
+     return sum;
+   }
+   
+  
+   console.log(sumOfEvens(1, 2, 3, 4, 5, 6)); 
+
+--------------------------------------------------------
 4.using rest operator function concept pass n no of arguments and  get the sum of even numbers of it(reduce)
+function sumOfEvens(...args) {
+     return args.reduce((sum, num) => {
+       if (num % 2 === 0) {
+         return sum + num;
+       }
+       return sum;
+     }, 0);
+   }
+   
+ 
+   console.log(sumOfEvens(10, 21, 32, 43, 54, 65));
+---------------------------------------------------
 5.using rest operator function concept pass n no of arguments an get the sum of all prime numbers of it(reduce)
-6.5.using rest operator function concept pass n no of character arguments an get the count of all vowels numbers of it.(forEach)
+const isPrime = (num) => {
+  if (num <= 1) return false; 
+  for (let i =2; i * i <= num; i++) {
+    if (num % i === 0) return false;
+  }
+  return true;
+};
+
+const sumOfPrimes = (...numbers) => {
+  return numbers.reduce((sum, current) => {
+    return isPrime(current) ? sum + current : sum;
+  }, 0);
+};
+
+console.log(sumOfPrimes(1,2,3,4,5,)); 
+------------------------------------------------------------------------------------------------------------------------
+6.using rest operator function concept pass n no of character arguments an get the count of all vowels numbers of it.(forEach)
+function countVowels(...args) {
+     const vowels = [ 'A', 'E', 'I', 'O', 'U'];
+     let count = 0;
+   
+     args.forEach((char) => {
+       if (vowels.includes(char)) {
+         count++;
+       }
+     });
+   
+     return count;
+   }
+   
+   
+   console.log(countVowels('A', 'B', 'C', 'D', 'E')); 
+---------------------------------------------------------------------
