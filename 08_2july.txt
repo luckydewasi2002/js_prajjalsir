@@ -1,0 +1,304 @@
+1.Sum all the numbers in an array using the method.
+ans.=>
+
+
+const numbers = [1, 2, 3, 4, 5];
+
+
+const sum = numbers.reduce((a, b) => a + b, 0);
+
+console.log("Sum of array:", sum); 
+
+---------------------------------------------------------
+2.Find the largest number in an array using the method.
+ans.=>
+const numbers = [1, 9, 7, 4, 5];
+
+
+const maxi = numbers.reduce((max,num) => num>max?num:max, 0);
+
+console.log("largest number is:", maxi); 
+
+-------------------------------------------------------------------
+3.Count the number of elements in an array using the reduce method.
+ans.=>
+const numbers = [1, 9, 7, 4, 5,8,6];
+
+
+const count= numbers.reduce((count) => count+1, 0);
+
+console.log("count of numbers:", count); 
+
+---------------------------------------------------------------
+4.Multiply all the numbers in an array using the method.
+ans.=>
+
+const numbers = [1, 9, 7, 4, 5,8,6];
+
+
+const multi= numbers.reduce((a,b) => a*b, 1);
+
+console.log("multipication of numbers:", multi); 
+
+------------------------------------------------------------
+5.Find the smallest number in an array using the method.
+ans.=>
+const numbers = [2, 9, 7, 4, 5,8,6];
+
+
+const min= numbers.reduce((min,num) => num<min?num:min,numbers[0] );
+
+console.log("minimium numbers:", min); 
+---------------------------------------------------------------
+6.Create an object representing a person with properties,email.
+Destructure these properties into separate variables and log them to the console.
+ans.=>
+      let person ={
+    name:"laxman dewasi",
+    email:"laxmanraika@gmail.com"
+}
+
+let{name,email}=person;
+console.log("name is",name)
+console.log("email is ",email)
+----------------------------------------------------------------
+7.Create an object representing a book with properties,,author andyear. 
+Destructure these properties and log them to the console.
+ans.=>
+     let book ={
+    title:"advance javascript",
+    auther:"prajjal dhar",
+    publication:2020
+
+}
+let{title,auther,publication}=book;
+console.log(`book title is ${title} and book auther is ${auther} book publication in ${publication}`)
+
+-------------------------------------------------------------------
+8.Create an object representing a product with properties,,name andprice.
+ Destructure these properties into separate variables and log them to the console.
+ans.=>
+let smartphone={
+    name:"apple",
+    model:"I phone 16 pro",
+    launch:2024
+}
+let{name,model,launch}=smartphone;
+
+console.log(`my smartphone name is ${name} and model ${model} launch in ${launch}`)
+
+-------------------------------------------------------------------------------
+9.Create an object representing a car with propertiesyear. Destructure these 
+properties into separate variables and log them to the console.
+ans.=>
+
+let car ={
+    model_year:2024
+}
+let{model_year}=car;
+
+console.log(`my car model is ${model_year}`)
+-----------------------------------------------------------------------------
+10.Write a function that accepts an object with propertiesemail, and 
+destructures these properties to return a string in the format "Name: [name], Age: [age], Email: [email]".
+ans.=>
+   let person ={
+    name :"laxman",
+    email:"laxmanraika@gmail.com",
+    age:24
+}
+let{name,email,age}=person;
+
+let str=`name ${name} ,email ${email}, age ${email}`
+
+console.log(str)
+-----------------------------------------------------------------------------------
+11.Write a function that accepts an object with properties,,author, andyear, and 
+destructures these properties to log each property to the console.
+ans.=>
+     function bookinfo(book){
+    let{title,auther,year}=book;
+    console.log("book name is", title);
+    console.log("book auther is",auther);
+    console.log("launch year",year)
+}
+
+
+let book={
+    title:"advance react",
+    auther:"prajjal dhar",
+    year:2024
+}
+
+bookinfo(book)
+
+----------------------------------------------------------
+12.Write a function that accepts an object with properties,,name, andprice,
+ and destructures these properties to return an object with only the name and price properties.
+ans.=>
+    
+function productuinfo(product){
+    let{name,price,manufactered,category}=product;
+    return {name,price}
+}
+
+let product ={
+    name: "laptop",
+    price:45000,
+    manufactered:"DELL",
+    category:"electronics"
+
+}
+let{name,price}=productuinfo(product)
+console.log("name is ",name)
+console.log("price is ",price)
+------------------------------------------------------------
+13.Write a function that accepts an object with propertiesyear, and destructures
+ these properties to return a string describing the car in the format "[year] [make] [model]".
+ans.=>
+   function carinfo(car){
+    let{name,year,model}=car;
+    return `${name},${year},${model}`
+}
+
+
+
+let car={
+    name:"swift",
+    year:2024,
+    model:"ZXi"
+}
+let aboutcar=carinfo(car)
+console.log(aboutcar)
+
+----------------------------------------------------------------------------------
+14.Write a function called introducePerson that accepts an object with properties,,age, andemail.
+ Destructure these properties inside the function and return a string in the format
+  "Hi, my name is [name], I am [age] years old, and you can contact me at [email]". 
+  The function should handle cases where the properties might be missing by using
+   default values ("Unknown" for and 0 forage).
+ans.=>
+      function personinfo(person){
+    let{name="unknown",age=0,email="unknown"}=person;
+    return `Hi, my name is ${name}, I am ${age} years old, and you can contact me at ${email}`
+}
+
+
+let person1= {
+    name:"shyam",
+    age:20,
+    email:"shyam@google.com"
+}
+let person2= {
+   
+    age:20,
+    email:"ramu@google.com"
+}
+let person3= {
+    name:"aju",
+    age:20,
+    email:"aju@google.com"
+}
+
+console.log(personinfo(person1))
+console.log(personinfo(person2))
+console.log(personinfo(person3))
+
+-----------------------------------------------------------------------------
+15.Write a function called describeBook that accepts an object with properties,
+,author, andyear. Destructure these properties inside the function and log a
+ message to the console in the format "The book '[title]' was written by [author]
+  and published in [year]". Handle cases where any of the properties might be missing
+   by using default values ("Unknown Title" fortitle, "Unknown Author" forauthor, and "Unknown Year" foryear).
+ans.=>
+     function bookinfo(book){
+    let{title="unknown title",auther="unknown auther",year="unknown year"}= book;
+    return `he book ${title} was written by ${auther} and published in ${year}`
+}
+
+
+
+let book1={
+    title:"ramayan",
+    auther:"valmiki",
+    year:1977
+}
+let book2={
+    
+    auther:"krishna",
+    year:1867
+}
+let book3={
+    title:"bible",
+    auther:"sikh",
+   
+}
+console.log(bookinfo(book1))
+console.log(bookinfo(book2))
+console.log(bookinfo(book3))
+
+--------------------------------------------------------------------------
+
+16.Write a function called displayProductInfo that accepts an object with properties,
+,name, andprice. Destructure these properties inside the function and return a string
+ in the format "Product [name] (ID: [id]) costs $[price]". The function should handle 
+ cases where any of the properties might be missing by using default values
+  ("Unknown ID" forid, "Unknown Name" forname, and 0 forprice).
+ans.=>
+function prodinfo(prod){
+    let{name="unknown name",id="unknown id",price=0}=prod;
+    return `Product ${name} (ID: ${id}) costs ${price}`
+}
+   let prod1={
+    name:"laptop",
+    id:"abcd",
+    price:500000
+   }
+   let prod2={
+    name:"mobile",
+    
+    price:25000
+   }
+   let prod3={
+    name:"smartwatch",
+    id:"zyxw",
+    
+   }
+
+console.log(prodinfo(prod1))
+console.log(prodinfo(prod2))
+console.log(prodinfo(prod3))
+---------------------------------------------------------------------------------------
+17.Write a function called carDescription that accepts an object with properties,
+,model, andyear. Destructure these properties inside the function and return a 
+string in the format "This car is a [year] [make] [model].". Handle cases where 
+any of the properties might be missing by using default values
+ ("Unknown Make" formake, "Unknown Model" formodel, and "Unknown Year" foryear).
+
+ ans.=>
+ function carinfo(car){
+    let{model="unknown model",year="unknown year",make="unknown company"}=car;
+    let str =`This car is a ${model} ${year} ${make} `
+    return str
+}
+
+
+let car1={
+   
+    model:"scorpio",
+    year:2024
+}
+let car2={
+    make:"tata",
+    year:2020
+}
+let car3={
+    model:"eco",
+    make:"ashok leyland"
+   
+}
+
+console.log(carinfo(car1))
+console.log(carinfo(car2))
+console.log(carinfo(car3))
+-----------------------------------------------

@@ -72,7 +72,7 @@ console.log(sumOfPrimes(1,2,3,4,5,));
 6.using rest operator function concept pass n no of character arguments an get the count of all vowels numbers of it.(forEach)
 function countVowels(...args) {
      const vowels = [ 'A', 'E', 'I', 'O', 'U'];
-     let count = 0;
+     let cou nt = 0;
    
      args.forEach((char) => {
        if (vowels.includes(char)) {
