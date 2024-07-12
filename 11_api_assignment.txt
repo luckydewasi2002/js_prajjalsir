@@ -1,0 +1,76 @@
+1. user,post,image koi ek se data fetch karna hai 
+ans.=>
+        https://jsonplaceholder.typicode.com/users
+
+--------------------------------------------------------------------------------------
+2. data fetch hone ke badd sirf ek field of information ka new array create karna hai.
+ans.=>
+
+fetch( ' https://jsonplaceholder.typicode.com/users')
+  .then(response => response.json())  
+  .then(data => {
+   
+    //console.log(data);
+
+   
+    const nameArray = data.map(user => user.name);
+
+   
+    console.log(nameArray);
+  })
+  .catch(error => {
+    console.error( error);
+   });
+
+   ----------------------------------------------------------------------------
+3. data fetch hone ke badd har odd field of information ka new array create karna hai.
+ans.=>
+fetch( ' https://jsonplaceholder.typicode.com/users')
+  .then(response => response.json())  
+  .then(data => {
+   
+  
+    const oddIndexedValues = data.filter((_, index) => index % 2 !== 0);
+      
+  
+   console.log(oddIndexedValues)
+  })
+  .catch(error => {
+    console.error( error);
+   });
+   ---------------------------------------------------------------
+4. data fetch hone ke badd har even field of information ka new array create karna hai.
+ans.=>
+fetch( ' https://jsonplaceholder.typicode.com/users')
+  .then(response => response.json())  
+  .then(data => {
+   
+  
+    const evenIndexedValues = data.filter((_, index) => index % 2 == 0);
+      
+  
+   console.log(evenIndexedValues)
+  })
+  .catch(error => {
+    console.error( error);
+   });
+   ----------------------------------------------------------
+5. data fetch hone ke badd har mutiple of 3 ka field of information ka array create karna ke lana hai.
+ans.=>
+fetch( ' https://jsonplaceholder.typicode.com/users')
+  .then(response => response.json())  
+  .then(data => {
+   
+  
+    const mutipleofthree = data.filter((_, index) => index % 3 !== 0);
+      
+  
+   console.log(mutipleofthree)
+  
+  })
+  .catch(error => {
+    console.error( error);
+   });
+-------------------------------------------------------------
+
+6.data mai se se sirf 2-3 field of information ko leke ek array mai add karna hai.
