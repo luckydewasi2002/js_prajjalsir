@@ -1,4 +1,5 @@
-// 1. You have several objects and need to pass them to a function. Inside the function, use the rest operator to handle the objects and print each one. Write the function and explain the process.
+// 1. You have several objects and need to pass them to a function. Inside the function,
+ use the rest operator to handle the objects and print each one. Write the function and explain the process.
 
 // const printobject = (...objects) => {
 //   objects.forEach((object) => {
@@ -79,7 +80,9 @@
 
 // line se values mil rahi hai to kya mai values ko skip kar sakta hoon
 
-//5. Write a function that can take any number of arguments and return their even sum only. Explain how the rest operator allows you to handle an indefinite number of arguments and how you can iterate(using reduce) over them to calculate the sum.
+//5. Write a function that can take any number of arguments and return their even sum only. 
+Explain how the rest operator allows you to handle an indefinite number of arguments 
+and how you can iterate(using reduce) over them to calculate the sum.
 
 // reduce array ke continous data par kaam karti hai
 // rest operator apne app mai array

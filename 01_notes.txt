@@ -488,6 +488,6 @@ const frequencycount = (...nums) => {
     if (num == 3) return count + 1;
     else return count;
   }, 0);
-};
+}; 
 
 console.log(frequencycount(1, 2, 3, 3, 3, 3, 3, 4, 5, 6));
