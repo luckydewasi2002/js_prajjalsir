@@ -13,8 +13,7 @@
     num1<input type="text" class="input" placeholder="enter the value 2"> <br><br>
     <button> Add</button> <br> <br>
     output<input type="text" class="input" placeholder="output">
-    <label for="">Student's Name :</label>
-    <input type="text" class="input" placeholder="Enter yor Name"> <br><br>
+    
     <script>
         let inputall = document.querySelectorAll(".input")
         let btn = document.querySelector("button")
@@ -23,11 +22,11 @@
          
              let value1 =Number (inputall[0].value)
              let value2 =Number (inputall[1].value)
-              let valu3= inputall[3].value
+              
              let output = value1+value2;
              inputall[2].value=output;
 
-             console.log(`${value1} + ${value2} = ${output} ${valu3} `)
+             console.log(`${value1} + ${value2} = ${output}  `)
              inputall[0].value=''
              inputall[1].value=''
             

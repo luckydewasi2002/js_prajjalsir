@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>todo list</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <style>
+        body{
+            background-color: antiquewhite;
+            display: flex;
+            justify-content: center;
+        }
+        .container{
+            
+           
+            margin-top: 50px;
+        }
+        #input{
+        border: none;
+        border: 1px solid black;
+        padding: 8px 30px ;
+        border-radius: 5px;
+       
+        }
+
+        #btn{
+            border: none;
+            background-color: red;
+            color: white;
+            font-family: sans-serif;
+            font-weight: 500px;
+            border-radius: 5px;
+            padding: 10px;
+            width: 50px;
+           cursor: pointer;
+        }
+        ul li{
+           
+            position: relative;
+        }
+        ul li span{
+            position: absolute;
+            right: 0;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <input id="input" type="text">
+        <button onclick="addtask()" id="btn">Add</button>
+
+        <ul id="ullist">
+            <!-- <li>ram <span><i class="fa-solid fa-xmark"></i></span></li> -->
+           
+        </ul>
+
+        <script>
+            let inputbox = document.getElementById("input")
+
+            
+            let addlist = document.getElementById("ullist")
+
+            function addtask(){
+                if(inputbox.value===""){
+                    alert("please enter something")
+                }
+                else{
+                    let li = document.createElement("li")
+                    li.innerHTML= inputbox.value;
+                    addlist.appendChild(li)
+                    let span = document.createElement("span");
+                    span.innerHTML="\u00d7"
+                    li.appendChild(span)
+
+                    
+                }
+                inputbox.value = "";
+
+            }
+
+            addlist.addEventListener("click",(e)=>{
+                if(e.target.tagName=="SPAN"){
+                    e.target.parentElement.remove();
+                }
+            },false)
+        </script>
+    </div>
+</body>
+</html>
